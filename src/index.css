@@ -1,0 +1,27 @@
+.globalStyle {
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "JetBrains Mono", monospace;
+
+    }
+
+    &::selection {
+        background-color: #f4afaf;
+        color: #fff;
+    }
+
+
+}
+
+.container{
+    max-width: 1470px;
+    width: 100%;
+    min-height: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    outline: red solid 1px;
+}
