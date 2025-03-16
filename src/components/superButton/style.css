@@ -1,0 +1,15 @@
+.superButton{
+    /*display: block;*/
+    box-sizing: border-box;
+    color: white;
+    background-color: #f15757;
+    height: 50px;
+    width: 120px;
+    border-radius: 25px;
+    border: none;
+    font-size: 19px;
+
+    &:hover{
+        cursor: pointer;
+    }
+}

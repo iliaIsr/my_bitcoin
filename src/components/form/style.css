@@ -1,0 +1,77 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(53, 45, 45, 0.5); /* Затемняющий фон */
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 377px;
+    height: 480px;
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: none;
+
+
+    &::after {
+        content: ''; /* Создаем пустой элемент */
+        display: block; /* Делаем его блочным элементом */
+        width: 100%; /* Ширина полоски */
+        height: 2px; /* Высота полоски */
+        background-color: #ccc; /* Цвет полоски */
+        margin-top: -10px; /* Отступ сверху для отделения от инпута */
+    }
+
+
+}
+
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 200px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 85, 85, .6) rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.content span{
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.selectedAsset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 21px;
+    gap: 20px;
+
+}

@@ -1,0 +1,71 @@
+
+.containerH1Button{
+    margin-top:30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+
+
+.text{
+    margin-top: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border:1px solid rebeccapurple;*/
+    font-size: 32px;
+}
+
+.portfolioOver{
+    font-size: 24px;
+    font-weight: 1;
+
+}
+
+
+
+
+
+
+
+.portfolioOverview {
+    background-color: #e6fbf6; /* Светлый фон */
+    border: 1px solid #ccc; /* Серый бордер */
+    border-radius: 8px; /* Закругленные углы */
+    padding: 20px; /* Внутренние отступы */
+    margin: 20px; /* Внешние отступы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+    font-family: Arial, sans-serif; /* Шрифт */
+    color: #333; /* Цвет текста */
+}
+
+.portfolioOverview h2 {
+    font-size: 24px; /* Размер заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.portfolioOverview ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.portfolioOverview li {
+    padding: 10px 0; /* Отступы для элементов списка */
+    border-bottom: 1px solid #ddd; /* Нижняя граница для элементов списка */
+}
+
+.portfolioOverview li:last-child {
+    border-bottom: none; /* Убираем нижнюю границу у последнего элемента */
+}
+
+tr{
+    cursor: pointer;
+
+    :hover {
+        background-color: #dfd3d3; /* Цвет фона при наведении */
+        border-radius: 8px; /* Скругление углов */
+    }
+}
