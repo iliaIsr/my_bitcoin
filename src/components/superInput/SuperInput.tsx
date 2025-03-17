@@ -5,6 +5,7 @@ type SuperInputPropsType = {
     placeholder: string;
     value?: string|number;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onFocus?:()=>void
 };
 export const SuperInput = (props: SuperInputPropsType) => {
     return (

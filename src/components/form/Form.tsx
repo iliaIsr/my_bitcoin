@@ -74,7 +74,9 @@ export const Form = ({onClose}: FormPropsType) => {
                     type='text'
                     placeholder='Поиск валюты'
                     value={searchTerm}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.currentTarget.value)}
+                    // onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.currentTarget.value)}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onFocus={() => console.log("Input focused")}
                 />
                 <div className='content'>
                     <FetchAssets onSelect={handleClick} searchTerm={searchTerm}/>
