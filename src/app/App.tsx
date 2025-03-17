@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 
-import {PortfolioOver} from "./components/portfolioOverview/PortfolioOver";
+import {PortfolioOverView} from "../components/portfolioOverview/PortfolioOverView";
 
 
 function App() {
     return (
         <div className="globalStyle">
-            <PortfolioOver/>
+            <PortfolioOverView/>
         </div>
     );
 }

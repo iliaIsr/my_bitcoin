@@ -2,11 +2,11 @@ import {SuperButton} from "../superButton/SuperButton";
 import './styles.css';
 import '../../index.css';
 import {useState} from "react";
-import {AssetsInPortfolio} from "./assetsPortfolio/AssetsInPortfolio";
+import {AssetsInPortfolio} from "./assetsInPortfolio/AssetsInPortfolio";
 import {Form} from "../form/Form";
 
 
-export const PortfolioOver = () => {
+export const PortfolioOverView = () => {
 
     const [active, setActive] = useState(false);
 

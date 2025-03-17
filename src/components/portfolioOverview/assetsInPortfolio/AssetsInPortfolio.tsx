@@ -1,9 +1,7 @@
-import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {AssetsState, removeAsset, updateAsset} from "../../../store/assetsSlice";
+import {AssetsState, removeAsset} from "../../../store/assetsSlice";
 import './style.css';
 import {useWebSocket} from "../../../hooks/useWebSocket";
-
 
 
 export const AssetsInPortfolio = () => {
@@ -17,6 +15,7 @@ export const AssetsInPortfolio = () => {
     useWebSocket()
 
     const totalValue = assets.reduce((acc, asset) => acc + asset.totalValue, 0);
+
     return (
         <div>
             {assets.length > 0 ? (
@@ -43,7 +42,6 @@ export const AssetsInPortfolio = () => {
                                     <td className={"change24h"} style={{color: asset.change24h < 0 ? 'red' : 'green'}}>
                                         {asset.change24h.toFixed(2)}%
                                     </td>
-                                    {/*<td>{asset.portfolioPersent.toFixed(2)}%</td>*/}
                                     <td>
                                         {totalValue > 0
                                             ? `${((asset.totalValue / totalValue) * 100).toFixed(2)}%`

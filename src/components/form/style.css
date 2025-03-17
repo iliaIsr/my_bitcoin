@@ -29,12 +29,12 @@
 
 
     &::after {
-        content: ''; /* Создаем пустой элемент */
-        display: block; /* Делаем его блочным элементом */
-        width: 100%; /* Ширина полоски */
-        height: 2px; /* Высота полоски */
-        background-color: #ccc; /* Цвет полоски */
-        margin-top: -10px; /* Отступ сверху для отделения от инпута */
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #ccc;
+        margin-top: -10px;
     }
 
 

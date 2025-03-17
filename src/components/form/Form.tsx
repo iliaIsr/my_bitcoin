@@ -31,6 +31,7 @@ export const Form = ({onClose}: FormPropsType) => {
             onClose();
         }
     };
+
     const handleClick = (obj: Asset) => {
         setShow(obj);
     }

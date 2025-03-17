@@ -2,6 +2,7 @@
   "name": "my-bitcoin",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://iliaIsr.github.io/my_bitcoin",
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
     "@testing-library/dom": "^10.4.0",
@@ -14,6 +15,7 @@
     "@types/react-dom": "^19.0.4",
     "axios": "^1.8.3",
     "classnames": "^2.5.1",
+    "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
@@ -29,7 +31,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

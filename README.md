@@ -1,3 +1,64 @@
+Для запуска приложения необъодимо:
+1. Скачать архив https://github.com/iliaIsr/my_bitcoin/archive/refs/heads/main.zip
+2. Установить зависимости: yarn install
+3. Запустите приложение: yarn start
+
+Список используемых библиотек:
+React
+Redux (react-redux, @reduxjs/toolkit)
+Axios
+gh-pages
+CSS
+
+Описание архитектуры приложения
+src/ 
+    components/ 
+        portfolioOverview/ 
+            PortfolioOverView.tsx (основной компонент для отображения портфолио)
+        form/
+            Form.tsx (компонент формы для добавления активов)
+        loader/ 
+             Loader.tsx (компонент для отображения индикатора загрузки)
+        superButton/ 
+              SuperButton.tsx (компонент кнопки)
+        superInput/ 
+              SuperInput.tsx (компонент поля ввода)
+        assetsInPortfolio/ 
+               AssetsInPortfolio.tsx (компонент для отображения списка активов)
+    fetch/   
+         FetchAssets.tsx (компонент для загрузки активов с API)
+    store/ (папка для Redux-логики)
+         assetsSlice.ts (слайс состояния активов)
+         store.ts (конфигурация Redux Store)
+    hooks/ (папка для пользовательских хуков)
+          useWebSocket.ts (хук для работы с WebSocket)
+App.tsx (основной компонент приложения)
+index.tsx (точка входа приложения)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,0 +1,30 @@
+.asset-table {
+    max-width: 100%;
+    width: 100%;
+    margin: 100px auto;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 40px;
+    border: none;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: none;
+    font-weight: normal;
+}
+
+th {
+
+}
+
+.change24h {
+    font-style: italic;
+    color: green;
+}

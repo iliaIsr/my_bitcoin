@@ -1,9 +1,9 @@
 .custom-input{
-    border: none; /* Убираем бордер */
-    padding: 15px; /* Увеличиваем внутренний отступ */
-    font-size: 16px; /* Увеличиваем размер шрифта */
-    width: 100%; /* Устанавливаем ширину 100% от родительского контейнера */
-    border-radius: 5px; /* Закругляем углы (по желанию) */
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
 
     &:focus{
         outline: none;
