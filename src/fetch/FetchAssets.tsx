@@ -18,7 +18,7 @@ export const FetchAssets = ({onSelect}: FetchAssetsPropsType) => {
             const response = await axios.get('https://api.binance.com/api/v3/ticker/24hr');
             setAssets(response.data);
         } catch (error) {
-            console.error('Ошибка при получении данных:', error);
+            console.error('Ошибка получения данных:', error);
             setError('Не удалось загрузить данные');
         } finally {
             setLoading(false);
