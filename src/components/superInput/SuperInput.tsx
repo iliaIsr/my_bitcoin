@@ -13,7 +13,7 @@ export const SuperInput = (props: SuperInputPropsType) => {
                 className='custom-input'
                 type={props.type}
                 placeholder={props.placeholder}
-                value={props.value}
+                value={props.value>0?props.value:''}
                 onChange={props.onChange}
             />
         </div>

@@ -25,18 +25,22 @@ export const AssetsInPortfolio = () => {
                             <thead>
                             <tr>
                                 <th>Актив</th>
-                                <th>Количество</th>
+                                <th>Кол-во</th>
                                 <th>Цена</th>
-                                <th>Общая стоимость</th>
-                                <th>Изм. за 24 ч.</th>
-                                <th>% портфеля</th>
+                                <th>Стоимость</th>
+                                <th>Изменения <br>
+
+                                </br>за 24 ч.</th>
+                                <th>%
+                                    <br></br>
+                                    портфеля</th>
                             </tr>
                             </thead>
                             <tbody>
                             {assets.map((asset) => (
                                 <tr key={asset.id} onClick={() => handleRemoveAsset(asset.id)}>
                                     <td>{asset.name}</td>
-                                    <td>{asset.quantity.toFixed(5)}</td>
+                                    <td>{asset.quantity.toFixed(2)}</td>
                                     <td>${asset.currentPrice.toFixed(2)}</td>
                                     <td>${asset.totalValue.toFixed(2)}</td>
                                     <td className={"change24h"} style={{color: asset.change24h < 0 ? 'red' : 'green'}}>
