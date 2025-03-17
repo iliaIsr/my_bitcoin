@@ -23,6 +23,7 @@ export const Form = ({onClose}: FormPropsType) => {
 
     const [show, setShow] = useState(defaultAsset);
     const [quantity, setQuantity] = useState(0);
+    const [searchTerm, setSearchTerm] = useState('');
     const dispatch = useDispatch();
     const assets = useSelector((state: { assets: AssetsState }) => state.assets.assets);
 
@@ -69,9 +70,14 @@ export const Form = ({onClose}: FormPropsType) => {
     return (
         <div className="modal" onClick={handleOverlayClick}>
             <div className="modal-content" style={{height: show.name ? '480px' : '360px'}}>
-                <SuperInput type='text' placeholder='Поиск валюты'/>
+                <SuperInput
+                    type='text'
+                    placeholder='Поиск валюты'
+                    value={searchTerm}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.currentTarget.value)}
+                />
                 <div className='content'>
-                    <FetchAssets onSelect={handleClick}/>
+                    <FetchAssets onSelect={handleClick} searchTerm={searchTerm}/>
                 </div>
                 {show.name ? (
                     <div>

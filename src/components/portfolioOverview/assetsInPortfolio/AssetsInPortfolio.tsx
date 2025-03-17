@@ -41,8 +41,8 @@ export const AssetsInPortfolio = () => {
                                 <tr key={asset.id} onClick={() => handleRemoveAsset(asset.id)}>
                                     <td>{asset.name}</td>
                                     <td>{asset.quantity.toFixed(2)}</td>
-                                    <td>${asset.currentPrice.toFixed(2)}</td>
-                                    <td>${asset.totalValue.toFixed(2)}</td>
+                                    <td>${asset.currentPrice.toFixed(3)}</td>
+                                    <td>${asset.totalValue.toFixed(3)}</td>
                                     <td className={"change24h"} style={{color: asset.change24h < 0 ? 'red' : 'green'}}>
                                         {asset.change24h.toFixed(2)}%
                                     </td>

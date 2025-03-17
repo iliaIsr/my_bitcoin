@@ -6,9 +6,10 @@ import {Loader} from "../components/loader/Loader";
 
 type FetchAssetsPropsType = {
     onSelect: (obj:Asset) => void,
+    searchTerm: string;
 }
 
-export const FetchAssets = ({onSelect}: FetchAssetsPropsType) => {
+export const FetchAssets = ({onSelect, searchTerm}: FetchAssetsPropsType) => {
     const [assets, setAssets] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -37,9 +38,15 @@ export const FetchAssets = ({onSelect}: FetchAssetsPropsType) => {
         return <div>{error}</div>;
     }
 
+
+
+    const filteredAssets = assets.filter(asset => asset.symbol.toLowerCase().includes(searchTerm.toLowerCase())
+
+    );
+
     return (
         <div className="assetModalTable">
-            {assets.map((asset) => {
+            {filteredAssets.map((asset) => {
                 const assetName = asset.symbol.slice(0, 3);
                 const priceChangePercent = +parseFloat(asset.priceChangePercent).toFixed(2);
                 const lastPrice = parseFloat(asset.lastPrice).toFixed(5);

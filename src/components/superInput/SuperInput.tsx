@@ -3,7 +3,7 @@ import './style.css'
 type SuperInputPropsType = {
     type: string;
     placeholder: string;
-    value?: any;
+    value?: string|number;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 export const SuperInput = (props: SuperInputPropsType) => {
@@ -13,7 +13,7 @@ export const SuperInput = (props: SuperInputPropsType) => {
                 className='custom-input'
                 type={props.type}
                 placeholder={props.placeholder}
-                value={props.value>0?props.value:''}
+                value={props.value === 0 ? '' : props.value}
                 onChange={props.onChange}
             />
         </div>
